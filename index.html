@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body class="container mt-4">
+    <h1 class="text-center">My GitHub Portfolio</h1>
+
+    <section class="mt-4">
+        <h2>About Me</h2>
+        <p>Hi, I'm Raghavi! A passionate AI enthusiast with experience in Cloud Operations, AI Agents, and LLM applications.</p>
+    </section>
+
+    <section class="mt-4">
+        <h2>Profiles</h2>
+        <ul>
+            <li><a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME" target="_blank">LinkedIn</a></li>
+            <li><a href="https://twitter.com/YOUR_TWITTER_USERNAME" target="_blank">Twitter</a></li>
+        </ul>
+    </section>
+
+    <section class="mt-4">
+        <h2>Resume</h2>
+        <a href="/static/resume.pdf" download class="btn btn-primary">Download Resume</a>
+    </section>
+
+    <section class="mt-4">
+        <h2>Projects</h2>
+        <div class="row">
+            {% for repo in repos %}
+                <div class="col-md-4">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ repo.name }}</h5>
+                            <p class="card-text">{{ repo.description or 'No description available.' }}</p>
+                            <a href="{{ repo.html_url }}" target="_blank" class="btn btn-outline-primary">View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+</body>
+</html>
