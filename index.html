@@ -3,46 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitHub Portfolio</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <title>Raghavi Konda - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="container mt-4">
-    <h1 class="text-center">My GitHub Portfolio</h1>
-
-    <section class="mt-4">
+<body>
+    <header>
+        <h1>Sai Sri Raghavi Konda</h1>
+        <p>Software Developer | AI & Cloud Enthusiast</p>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="about">
         <h2>About Me</h2>
-        <p>Hi, I'm Adharsh! A passionate AI enthusiast with experience in Cloud Operations, AI Agents, and LLM applications.</p>
+        <p>Passionate about AI, Cloud, and DevOps. Experienced in building LLM-powered AI agents, cloud automation, and document-based chatbots.</p>
     </section>
-
-    <section class="mt-4">
-        <h2>Profiles</h2>
-        <ul>
-            <li><a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank">GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME" target="_blank">LinkedIn</a></li>
-            <li><a href="https://twitter.com/YOUR_TWITTER_USERNAME" target="_blank">Twitter</a></li>
-        </ul>
-    </section>
-
-    <section class="mt-4">
-        <h2>Resume</h2>
-        <a href="/static/resume.pdf" download class="btn btn-primary">Download Resume</a>
-    </section>
-
-    <section class="mt-4">
-        <h2>Projects</h2>
-        <div class="row">
-            {% for repo in repos %}
-                <div class="col-md-4">
-                    <div class="card mb-3">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ repo.name }}</h5>
-                            <p class="card-text">{{ repo.description or 'No description available.' }}</p>
-                            <a href="{{ repo.html_url }}" target="_blank" class="btn btn-outline-primary">View on GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}
+    
+    <section id="experience">
+        <h2>Professional Experience</h2>
+        <div class="job">
+            <h3>Software Developer Intern</h3>
+            <p>International Fund for Agriculture Development (IFAD) | Aug 2024 – Dec 2024</p>
+            <ul>
+                <li>Developed AI-powered function execution pipelines using Python.</li>
+                <li>Built GraphRAG for enhanced AI-driven knowledge retrieval.</li>
+                <li>Deployed cloud infrastructure using Terraform.</li>
+            </ul>
+        </div>
+        <div class="job">
+            <h3>Software Development Engineer</h3>
+            <p>Sopra Steria, Chennai, India | Jul 2021 – Jan 2023</p>
+            <ul>
+                <li>Developed AWS & Azure-based applications.</li>
+                <li>Automated cloud infrastructure setup with Terraform.</li>
+                <li>Implemented CI/CD pipelines using GitLab.</li>
+            </ul>
         </div>
     </section>
+    
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Document Chatbot (DeepSeek R1 & Ollama)</h3>
+            <p>Built an AI-driven chatbot for document-based queries using DeepSeek R1 & Ollama.</p>
+        </div>
+        <div class="project">
+            <h3>Sakhi - AI Companion</h3>
+            <p>Developed an AI-based personal companion app for mental wellness.</p>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:raghavikonda99@gmail.com">raghavikonda99@gmail.com</a></p>
+        <p>LinkedIn: <a href="#">Your LinkedIn</a></p>
+        <p>Medium: <a href="#">Your Medium</a></p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Sai Sri Raghavi Konda. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
